@@ -1,0 +1,27 @@
+package main;
+
+
+/**
+ * This is the main class that starts game and controls window
+ *
+ * @author (Zach Brough)
+ * @version (3,6,2024)
+ */
+
+import javax.swing.JFrame;
+
+public class Main
+{
+    public static void main(String[]args){
+        JFrame window = new JFrame("Zachtris");
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setResizable(false);
+        
+        window.setLocationRelativeTo(null);
+        window.setVisible(true);
+        GamePanel gp = new GamePanel();
+        window.add(gp);
+        window.pack();
+        gp.launchGame();
+    }
+}
